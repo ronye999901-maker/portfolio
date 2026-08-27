@@ -718,7 +718,7 @@ export default function Home() {
                   <span>LinkedIn</span>
                 </a>
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/ronye999901-maker"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-cyan-500/15 border border-white/10 hover:border-cyan-500/30 text-xs text-slate-200 hover:text-cyan-300 transition-all font-mono"

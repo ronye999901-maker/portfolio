@@ -23,8 +23,8 @@ export const socialProfiles: SocialProfile[] = [
   {
     id: "github",
     name: "GitHub",
-    username: "sayandas",
-    url: "https://github.com/04sayandas",
+    username: "ronye999901-maker",
+    url: "https://github.com/ronye999901-maker",
     description: "Code, open-source repositories, system architectures, and engineering projects.",
     icon: "github",
     category: "code",
