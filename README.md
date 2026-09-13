@@ -7,7 +7,7 @@
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![Copyright](https://img.shields.io/badge/©-All_Rights_Reserved-blue.svg?style=for-the-badge)](#)
 
 [🌐 Live Website](https://portfolio.vercel.app) • [💼 LinkedIn](https://www.linkedin.com/in/sayan-das-b3739928a) • [🐙 GitHub](https://github.com/ronye999901-maker) • [📧 Email Me](mailto:04sayandas@gmail.com)
 
@@ -87,40 +87,6 @@ A modern, high-performance developer portfolio built with **Next.js 16**, **Reac
 - **Focus:** Replacing slow computational TCAD iterations with trained neural surrogate models to predict nano-ribbon I-V characteristics and conductance curves.
 
 ---
-
-## 💻 Getting Started Locally
-
-To run this portfolio locally on your machine:
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/ronye999901-maker/portfolio.git
-cd portfolio
-```
-
-### 2. Install dependencies
-```bash
-npm install
-```
-
-### 3. Start the development server
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
-
----
-
-## 📦 Building for Production
-
-```bash
-# Create an optimized production build
-npm run build
-
-# Preview production build locally
-npm run start
-```
 
 ---
 
