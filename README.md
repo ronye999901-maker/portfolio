@@ -88,8 +88,6 @@ A modern, high-performance developer portfolio built with **Next.js 16**, **Reac
 
 ---
 
----
-
 ## 📬 Contact & Connect
 
 - **Name:** Sayan Das
