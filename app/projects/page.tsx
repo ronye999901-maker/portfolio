@@ -29,7 +29,7 @@ export default function ProjectsPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("ALL");
 
-  const categories = ["ALL", "AI / ML", "DRONE", "IOT", "WEB DEVELOPMENT", "BACKEND"];
+  const categories = ["ALL", "AI / ML", "DRONE", "E-COMMERCE", "WEB DEVELOPMENT", "BACKEND", "IOT"];
 
   const filteredProjects = projectsData.filter((p) => {
     const matchesCat =

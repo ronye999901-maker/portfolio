@@ -1,4 +1,4 @@
-﻿export interface SkillCategory {
+export interface SkillCategory {
   title: string;
   description: string;
   skills: {
@@ -16,9 +16,9 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Python", highlight: true, relatedProjects: ["pyroeye", "cinematch", "research"] },
       { name: "Java", highlight: true, relatedProjects: ["drone-monitoring"] },
-      { name: "JavaScript", highlight: true, relatedProjects: ["ecommerce"] },
-      { name: "HTML", highlight: false, relatedProjects: ["ecommerce"] },
-      { name: "CSS", highlight: false, relatedProjects: ["ecommerce"] },
+      { name: "JavaScript", highlight: true, relatedProjects: ["pricebite", "flipkart-clone"] },
+      { name: "HTML", highlight: false, relatedProjects: ["pricebite", "flipkart-clone"] },
+      { name: "CSS", highlight: false, relatedProjects: ["pricebite", "flipkart-clone"] },
     ],
   },
   {
@@ -36,7 +36,10 @@ export const skillCategories: SkillCategory[] = [
     title: "Frontend",
     description: "Modern component-driven web interfaces with rich state management.",
     skills: [
-      { name: "React.js", highlight: true, relatedProjects: ["ecommerce"] },
+      { name: "React.js", highlight: true, relatedProjects: ["pricebite", "flipkart-clone"] },
+      { name: "TypeScript", highlight: true, relatedProjects: ["pricebite"] },
+      { name: "Next.js", highlight: true },
+      { name: "Tailwind CSS", highlight: true, relatedProjects: ["pricebite"] },
     ],
   },
   {
@@ -55,7 +58,8 @@ export const skillCategories: SkillCategory[] = [
     title: "Databases",
     description: "Relational and document data storage, schema modeling, and indexing.",
     skills: [
-      { name: "MongoDB", highlight: true, relatedProjects: ["ecommerce"] },
+      { name: "MongoDB", highlight: true, relatedProjects: ["flipkart-clone"] },
+      { name: "Supabase", highlight: true, relatedProjects: ["pricebite"] },
       { name: "MySQL", highlight: true, relatedProjects: ["drone-monitoring"] },
     ],
   },

@@ -59,7 +59,7 @@ export default function Home() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-  const categories = ["ALL", "AI / ML", "DRONE", "IOT", "WEB DEVELOPMENT", "BACKEND"];
+  const categories = ["ALL", "AI / ML", "DRONE", "E-COMMERCE", "WEB DEVELOPMENT", "BACKEND", "IOT"];
 
   const filteredProjects =
     selectedCategory === "ALL"

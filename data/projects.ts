@@ -1,10 +1,10 @@
-﻿export interface Project {
+export interface Project {
   id: string;
   slug: string;
   number: string;
   title: string;
   subtitle: string;
-  category: "AI / ML" | "WEB DEVELOPMENT" | "BACKEND" | "IOT" | "DRONE" | "DATA SCIENCE";
+  category: "AI / ML" | "WEB DEVELOPMENT" | "BACKEND" | "IOT" | "DRONE" | "DATA SCIENCE" | "E-COMMERCE";
   allCategories: string[];
   description: string;
   technologies: string[];
@@ -58,13 +58,13 @@ export const projectsData: Project[] = [
     ],
     problem: "Wildfires expand at catastrophic speeds within minutes of ignition. Satellite passes take hours and manual lookouts have critical blindspots, resulting in delayed intervention and massive ecosystem destruction.",
     objective: "Engineer an autonomous aerial edge-detection pipeline fusing infrared thermal imaging with lightweight YOLO neural inference to isolate flare-ups before they spread.",
-    implementation: "Constructed an end-to-end Python pipeline running on embedded compute that ingests continuous thermal frames, applies noise filtering, runs YOLO object detection for flame centroids, and dispatches automated telemetry triggers.",
-    challenges: "Calibrating thermal threshold curves against environmental solar reflections and minimizing false positives caused by ambient ground heat.",
-    futureImprovements: "Autonomous multi-UAV mesh coordination, edge swarm communications, and direct integration with forest department emergency dispatch systems.",
-    githubUrl: "https://github.com/sayandas/pyroeye",
+    implementation: "Designed a multi-modal computer vision architecture merging FLIR thermal streams with optical YOLOv8 bounding boxes, cross-referencing temperature threshold matrices to prevent false positives.",
+    challenges: "Minimizing false positives caused by solar reflections on water bodies and hot rocky terrain in dense canopy zones.",
+    futureImprovements: "Edge mesh network coordination with automated drone fleet dispatch and solar-recharging base stations.",
+    githubUrl: "https://github.com/ronye999901-maker/pyroeye",
     liveDemoUrl: "https://pyroeye-demo.vercel.app",
     featured: true,
-    heroGradient: "from-amber-500/20 via-red-500/10 to-transparent",
+    heroGradient: "from-amber-500/20 via-orange-500/10 to-transparent",
   },
   {
     id: "nidar",
@@ -74,27 +74,27 @@ export const projectsData: Project[] = [
     subtitle: "NIDAR Drone Research Project",
     category: "DRONE",
     allCategories: ["DRONE", "AI / ML", "IOT"],
-    description: "Architected a UAV monitoring system with real-time video processing at 15+ FPS.",
-    technologies: ["Raspberry Pi 5", "LoRa E5 Mini", "GPS", "TensorFlow"],
+    description: "Conducted research on autonomous UAV control systems, edge AI processing, and hardware integration.",
+    technologies: ["Drone Tech", "Raspberry Pi", "Edge AI", "Computer Vision", "LoRa"],
     features: [
-      "Real-time edge video processing at 15+ FPS",
-      "Sub-GHz LoRa E5 Mini long-range telemetry",
-      "GPS waypoint navigation & geospatial logging",
-      "TensorFlow embedded machine learning models",
-      "Disaster response decision support"
+      "Hardware-software integration pipeline",
+      "Autonomous flight controller integration",
+      "Low-power LoRa long-range communication",
+      "Lightweight edge computer vision inference",
+      "Fail-safe return-to-launch protocols"
     ],
     architectureSteps: [
-      "Raspberry Pi 5",
-      "GPS & LoRa Telemetry",
-      "TensorFlow Edge AI",
-      "15+ FPS Video Processing",
-      "Command Center",
-      "Disaster Response Action"
+      "Sensors & GPS",
+      "Raspberry Pi Edge",
+      "Flight Controller",
+      "LoRa Telemetry",
+      "Ground Station",
+      "Dashboard"
     ],
-    keyResult: "Achieved 93% detection accuracy and improved disaster response efficiency by 30%.",
+    keyResult: "Sub-100ms telemetry latency over a 3.5km operational radius without cellular infrastructure.",
     stats: [
-      { label: "Detection Accuracy", value: "93%" },
-      { label: "Frame Rate", value: "15+ FPS" },
+      { label: "Range", value: "3.5 km" },
+      { label: "Edge Hardware", value: "Raspberry Pi 5" },
       { label: "Efficiency Gain", value: "+30%" }
     ],
     problem: "Natural catastrophes often sever cellular towers and ground access roads, blinding rescue teams and delaying critical medical supplies or emergency evacuations.",
@@ -102,7 +102,7 @@ export const projectsData: Project[] = [
     implementation: "Deployed quantized TensorFlow models for survivor and structural hazard detection on the Raspberry Pi 5 with multithreaded camera buffers, transmitting compressed coordinate payloads via LoRa E5 Mini to mobile rescue field stations.",
     challenges: "Achieving steady 15+ FPS video inference on edge embedded ARM architecture while keeping thermal throttling and battery draw within strict flight envelopes.",
     futureImprovements: "Multi-drone ad-hoc routing protocols, real-time 3D topographical map stitching, and automated emergency payload drop mechanisms.",
-    githubUrl: "https://github.com/sayandas/nidar",
+    githubUrl: "https://github.com/ronye999901-maker/nidar",
     liveDemoUrl: "https://nidar-research.vercel.app",
     featured: true,
     heroGradient: "from-cyan-500/20 via-blue-500/10 to-transparent",
@@ -116,7 +116,7 @@ export const projectsData: Project[] = [
     category: "DATA SCIENCE",
     allCategories: ["DATA SCIENCE", "AI / ML"],
     description: "Designed and implemented a data-driven movie recommendation system using content-based and collaborative filtering.",
-    technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
+    technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Flask"],
     features: [
       "Content-based metadata similarity ranking",
       "Collaborative filtering user cluster modeling",
@@ -142,7 +142,7 @@ export const projectsData: Project[] = [
     implementation: "Engineered feature extraction pipelines in Scikit-Learn utilizing TF-IDF representations for genres, cast, and summaries, paired with cosine distance matrices and KNN neighbor lookups.",
     challenges: "Handling matrix sparsity and calculating high-dimensional vector spaces efficiently without unbounded memory overhead.",
     futureImprovements: "Neural matrix factorization, deep autoencoders for latent feature extraction, and real-time session-based reinforcement learning.",
-    githubUrl: "https://github.com/sayandas/cinematch",
+    githubUrl: "https://github.com/ronye999901-maker/cinematch",
     liveDemoUrl: "https://cinematch-analytics.vercel.app",
     featured: true,
     heroGradient: "from-purple-500/20 via-pink-500/10 to-transparent",
@@ -183,49 +183,91 @@ export const projectsData: Project[] = [
     implementation: "Structured Spring Boot REST and WebSocket handlers with JWT filter interceptors, storing time-series telemetry into an indexed MySQL database with custom geospatial coordinate mapping.",
     challenges: "Handling network dropouts gracefully with automated client reconnect buffers and reconciling out-of-order sensor packets.",
     futureImprovements: "Apache Kafka integration for massive horizontal telemetry event streaming and Redis caching for sub-millisecond geofence lookups.",
-    githubUrl: "https://github.com/sayandas/drone-monitoring-backend",
+    githubUrl: "https://github.com/ronye999901-maker/drone-monitoring-backend",
     liveDemoUrl: "https://drone-backend-api.vercel.app",
     featured: true,
     heroGradient: "from-emerald-500/20 via-teal-500/10 to-transparent",
   },
   {
-    id: "ecommerce",
-    slug: "ecommerce",
+    id: "pricebite",
+    slug: "pricebite",
     number: "05",
-    title: "E-Commerce Website",
-    subtitle: "Swiggy Clone - Full-Stack Platform",
-    category: "WEB DEVELOPMENT",
-    allCategories: ["WEB DEVELOPMENT", "BACKEND"],
-    description: "Engineered a responsive full-stack food delivery and e-commerce web platform with dynamic shopping cart and real-time state management.",
-    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs"],
+    title: "PriceBite",
+    subtitle: "Smart Grocery Price Comparison & Basket Optimization Platform",
+    category: "E-COMMERCE",
+    allCategories: ["E-COMMERCE", "WEB DEVELOPMENT"],
+    description: "Engineered a high-performance grocery price comparison and multi-store basket optimization platform built with React 19, TypeScript, Vite, Tailwind CSS, and Supabase.",
+    technologies: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "Recharts", "Lucide React"],
     features: [
-      "Secure user authentication & session management",
-      "Dynamic shopping cart with optimistic price calculations",
-      "Custom RESTful APIs for multi-restaurant menus",
-      "Mobile-first responsive interface design",
-      "Structured checkout and order fulfillment lifecycle"
+      "Real-time cross-vendor grocery price tracking & comparison",
+      "Intelligent multi-store basket optimizer for maximum savings",
+      "Historical price volatility & inflation trend analytics",
+      "Supabase relational data store & secure authentication",
+      "Internationalization (i18n) & responsive fluid UI"
     ],
     architectureSteps: [
-      "React Client UI",
-      "RESTful API Layer",
-      "Express / Node Middleware",
-      "MongoDB Database",
-      "Order & Cart State"
+      "Product Catalog",
+      "Price Ingestion Engine",
+      "Supabase Backend",
+      "Basket Optimizer",
+      "Recharts Analytics",
+      "User Dashboard"
     ],
-    keyResult: "Seamless mobile-first ordering experience deployed on Vercel and Render with optimized client bundle size.",
+    keyResult: "Delivers sub-100ms multi-vendor cart optimization calculations with interactive price volatility visual analytics.",
+    stats: [
+      { label: "Frontend", value: "React 19 + Vite" },
+      { label: "Database", value: "Supabase" },
+      { label: "Optimization", value: "Multi-Store" }
+    ],
+    problem: "Fragmented online grocery retailers and volatile pricing make finding the cheapest total basket across multiple vendors time-consuming and inefficient for consumers.",
+    objective: "Build an intuitive, lightning-fast price comparison and basket optimizer that calculates the lowest combined order cost across stores while visualizing price trends.",
+    implementation: "Built with React 19 and TypeScript, powered by Vite for instant HMR. Integrated Supabase for persistent price feeds, user carts, and relational product hierarchies, visualized through Recharts.",
+    challenges: "Calculating combinatorial basket distribution across split vendors while accounting for individual store minimum order thresholds and delivery charges.",
+    futureImprovements: "Automated scheduled web scrapers, receipt OCR scanner for offline grocery bills, and push notification alerts for price drops.",
+    githubUrl: "https://github.com/ronye999901-maker/pricebite",
+    liveDemoUrl: "https://pricebite.vercel.app",
+    featured: true,
+    heroGradient: "from-emerald-500/20 via-green-500/10 to-transparent",
+  },
+  {
+    id: "flipkart-clone",
+    slug: "flipkart-clone",
+    number: "06",
+    title: "Flipkart MERN Clone",
+    subtitle: "Full-Stack E-Commerce & Payment Engine",
+    category: "E-COMMERCE",
+    allCategories: ["E-COMMERCE", "WEB DEVELOPMENT", "BACKEND"],
+    description: "Engineered a production-ready MERN stack e-commerce web platform replicating Flipkart's end-to-end shopping experience, user authentication, and payment gateway workflows.",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Redux", "Paytm Gateway", "JWT", "REST APIs"],
+    features: [
+      "Secure user authentication (JWT + Bcrypt) & session management",
+      "Comprehensive product catalog with multi-attribute filtering & search",
+      "Dynamic shopping cart with optimistic price calculations",
+      "Paytm / Stripe payment gateway integration with webhooks",
+      "Admin order management, order tracking, and inventory fulfillment"
+    ],
+    architectureSteps: [
+      "React UI + Redux Store",
+      "Express REST API",
+      "JWT Middleware",
+      "MongoDB Database",
+      "Payment Gateway",
+      "Order Fulfillment"
+    ],
+    keyResult: "Full end-to-end purchase lifecycle with sub-second catalog search and secure payment verification.",
     stats: [
       { label: "Architecture", value: "MERN Stack" },
-      { label: "Deployment", value: "Vercel + Render" },
-      { label: "Design", value: "Mobile-First" }
+      { label: "Payments", value: "Paytm / Stripe" },
+      { label: "State", value: "Redux Toolkit" }
     ],
-    problem: "Digital food delivery services demand instantaneous cart recalculations, responsive fluid navigation on mobile screens, and resilient API handling under volatile network conditions.",
-    objective: "Develop a high-performance Swiggy clone replicating consumer-grade e-commerce UX, decoupled REST API services, and reactive state management.",
-    implementation: "Engineered a React SPA with Context API for state management, connected to an Express/Node.js API that communicates with a MongoDB cluster for restaurant catalogs and user orders.",
-    challenges: "Maintaining zero layout shift across dynamic restaurant list loading and synchronizing complex multi-item cart options.",
-    futureImprovements: "Live driver location tracking with Socket.IO and automated SMS order confirmation relays.",
-    githubUrl: "https://github.com/sayandas/ecommerce-swiggy-clone",
-    liveDemoUrl: "https://swiggy-clone-sayan.vercel.app",
+    problem: "Building a production-ready e-commerce platform requires seamless synchronization between real-time product inventories, secure checkout pipelines, state management, and reliable payment callbacks.",
+    objective: "Develop a high-performance Flipkart clone replicating enterprise e-commerce UX, decoupled REST API services, transactional payment workflows, and reactive state management.",
+    implementation: "Structured a decoupled React SPA with Redux for global cart state, connected to an Express/Node.js API backend that interfaces with MongoDB Atlas and integrates Paytm payment checksum validation.",
+    challenges: "Ensuring idempotency during checkout transactions and preventing race conditions during simultaneous inventory deductions.",
+    futureImprovements: "Redis caching layer for trending products, recommendation engine integration, and automated invoice PDF generation.",
+    githubUrl: "https://github.com/ronye999901-maker/flipkart-mern",
+    liveDemoUrl: "https://flipkart-mern-sayan.vercel.app",
     featured: true,
-    heroGradient: "from-orange-500/20 via-amber-500/10 to-transparent",
+    heroGradient: "from-blue-500/20 via-indigo-500/10 to-transparent",
   },
 ];
